@@ -19,6 +19,18 @@ describe('closures', function() {
     })
   })
 
+  describe('produceTipCalculator', function(){
+    it('returns a function', function(){
+      expect(typeof produceTipCalculator()).to.equal('function')
+    })
+
+    it('configures the percentage tip returned', function(){
+      let tenPercentTip = produceTipCalculator(.10)
+      expect(tenPercentTip(50)).to.equal(5)
+      expect(tenPercentTip(30)).to.equal(3)
+    })
+  })
+
   describe('createDriver', function(){
     const Driver = createDriver()
 
