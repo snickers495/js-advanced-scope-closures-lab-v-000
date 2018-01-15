@@ -9,3 +9,8 @@
      }
    }
  }
+function produceTipCalculator(percent){
+    return function(total) {
+      return total * percent;
+    }
+}
